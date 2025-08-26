@@ -7,34 +7,34 @@
 
 ---
 
-## ⚡ Quick Start Guide (15-30 Minutes)
+## Quick Start Guide (15-30 Minutes)
 
 Get your AI-powered database query system running quickly with these essential steps:
 
 ### Fast Track Setup Checklist
 
-1. **✅ Prepare Data Files**
+1. **Prepare Data Files**
    - Download the 3 CSV files from the Data folder
    - Verify files: `departments.csv`, `employees.csv`, `projects.csv`
 
-2. **✅ Upload to Google Cloud Storage**
+2. **Upload to Google Cloud Storage**
    - Create bucket: `mis_sample_data_bucket`
    - Upload all 3 CSV files
 
-3. **✅ Create BigQuery Dataset**
+3. **Create BigQuery Dataset**
    - Dataset name: `mis_sample_dataset`
    - Load each CSV as a table (auto-detect schema)
 
-4. **✅ Choose Your Implementation**
+4. **Choose Your Implementation**
    - **Recommended:** AgentSpace (conversational AI) - 30 mins
    - **Alternative:** Vertex AI Search (basic search) - 20 mins
 
-5. **✅ Configure AI Agent**
+5. **Configure AI Agent**
    - Copy the provided system prompt (see Quick Start Prompt below)
    - Connect to BigQuery dataset
    - Enable natural language processing
 
-6. **✅ Test Your Setup**
+6. **Test Your Setup**
    - Try: "What is the average salary by department?"
    - Verify results match expected output
 
@@ -53,24 +53,24 @@ Generate accurate SQL queries from natural language, provide business insights, 
 
 ---
 
-## 🗺️ Implementation Architecture Overview
+## Implementation Architecture Overview
 
 ```mermaid
 flowchart TB
     subgraph Data Layer
-        CSV[📁 CSV Files<br/>3 tables, 46 records]
-        GCS[☁️ Google Cloud Storage<br/>mis_sample_data_bucket]
-        BQ[📊 BigQuery<br/>mis_sample_dataset]
+        CSV[CSV Files<br/>3 tables, 46 records]
+        GCS[Google Cloud Storage<br/>mis_sample_data_bucket]
+        BQ[BigQuery<br/>mis_sample_dataset]
     end
     
     subgraph AI Layer
-        VS[🔍 Vertex AI Search<br/>Basic Query Interface]
-        AS[🤖 AgentSpace<br/>Conversational AI]
+        VS[Vertex AI Search<br/>Basic Query Interface]
+        AS[AgentSpace<br/>Conversational AI]
     end
     
     subgraph User Interface
-        CHAT[💬 Chat Interface]
-        API[🔌 API Access]
+        CHAT[Chat Interface]
+        API[API Access]
     end
     
     CSV --> GCS
@@ -79,23 +79,17 @@ flowchart TB
     BQ --> AS
     VS --> API
     AS --> CHAT
-    CHAT --> USER[👤 Business Users]
-    API --> DEV[👨‍💻 Developers]
-    
-    style CSV fill:#e3f2fd
-    style GCS fill:#fff3e0
-    style BQ fill:#f3e5f5
-    style AS fill:#e8f5e9,stroke:#4caf50,stroke-width:3px
-    style CHAT fill:#fffde7
+    CHAT --> USER[Business Users]
+    API --> DEV[Developers]
 ```
 
-## 📋 Which Implementation Should You Choose?
+## Which Implementation Should You Choose?
 
 | Method | Best For | Setup Time | Technical Level | Key Features |
-|--------|----------|------------|-----------------|--------------|
-| **🚀 AgentSpace** (Recommended) | • Production systems<br/>• Conversational queries<br/>• Business users | 30 mins | Medium | • Natural conversation<br/>• Context retention<br/>• Advanced analytics |
-| **🔍 Vertex AI Search** | • Simple search needs<br/>• Quick prototypes<br/>• Basic queries | 20 mins | Low | • Search interface<br/>• Quick setup<br/>• Limited customization |
-| **📊 Direct BigQuery** | • Technical users<br/>• Custom applications<br/>• SQL experts | 15 mins | High | • Full SQL control<br/>• No AI features<br/>• Maximum flexibility |
+|--------|----------|------------|-----------------|--------------||
+| **AgentSpace** (Recommended) | • Production systems<br/>• Conversational queries<br/>• Business users | 30 mins | Medium | • Natural conversation<br/>• Context retention<br/>• Advanced analytics |
+| **Vertex AI Search** | • Simple search needs<br/>• Quick prototypes<br/>• Basic queries | 20 mins | Low | • Search interface<br/>• Quick setup<br/>• Limited customization |
+| **Direct BigQuery** | • Technical users<br/>• Custom applications<br/>• SQL experts | 15 mins | High | • Full SQL control<br/>• No AI features<br/>• Maximum flexibility |
 
 ---
 
@@ -336,19 +330,19 @@ All data is fictional and designed for educational and experimental purposes in 
 
 This comprehensive tutorial is structured for different use cases and skill levels:
 
-**📚 Basic Setup (Educational Focus)** - Ideal for MIS students and course demonstrations
+**Basic Setup (Educational Focus)** - Ideal for MIS students and course demonstrations
 - Essential concepts and step-by-step implementation
 - Academic learning objectives and discussion points
 - Suitable for classroom environments and individual learning
 
-**🏢 Advanced Enterprise Configuration** - Designed for production deployments
+**Advanced Enterprise Configuration** - Designed for production deployments
 - Advanced features and enterprise-grade security
 - Performance optimization and scalability considerations
 - Production-ready implementation with comprehensive testing
 
 ---
 
-## 📚 Basic Setup: Educational Implementation
+## Basic Setup: Educational Implementation
 
 This section provides a step-by-step tutorial for setting up the MIS Sample Database with Vertex AI Search capabilities, perfect for educational environments and MIS course demonstrations.
 
@@ -577,7 +571,7 @@ Once your setup is complete, try these MIS-focused queries:
 - How does this architecture support scalability and performance?
 - What security considerations are important in cloud-based systems?
 
-## 📚 Learning Path for MIS Students
+## Learning Path for MIS Students
 
 ### Week 1: Foundation
 - [ ] Complete Quick Start Guide
@@ -601,7 +595,7 @@ Once your setup is complete, try these MIS-focused queries:
 
 ---
 
-## 🏢 Advanced Enterprise Configuration
+## Advanced Enterprise Configuration
 
 This section covers advanced setup and configuration options for production-ready Vertex AI Search implementations, including enterprise features, advanced testing, and optimization strategies.
 
@@ -779,7 +773,7 @@ Complete final validation of the production-ready search application.
 
 ---
 
-# 🤖 AI Agent System Prompts and Configuration
+# AI Agent System Prompts and Configuration
 
 This section provides comprehensive system prompt templates and configuration guidelines for creating effective AI agents for business intelligence and database querying applications.
 
@@ -1122,21 +1116,17 @@ This comprehensive system prompt framework ensures your Vertex AI Search agents 
 
 ---
 
-# 🚀 AgentSpace Implementation (Recommended Approach)
+# AgentSpace Implementation (Recommended Approach)
 
 ## Setup Process Overview
 
 ```mermaid
 flowchart LR
-    A[📝 Prepare<br/>CSV Data] --> B[☁️ Upload<br/>to GCS]
-    B --> C[📊 Create<br/>BigQuery Dataset]
-    C --> D[🤖 Configure<br/>AgentSpace]
-    D --> E[🧪 Test<br/>Queries]
-    E --> F[🚀 Deploy<br/>to Production]
-    
-    style A fill:#e3f2fd
-    style D fill:#e8f5e9,stroke:#4caf50,stroke-width:2px
-    style F fill:#fff9c4
+    A[Prepare<br/>CSV Data] --> B[Upload<br/>to GCS]
+    B --> C[Create<br/>BigQuery Dataset]
+    C --> D[Configure<br/>AgentSpace]
+    D --> E[Test<br/>Queries]
+    E --> F[Deploy<br/>to Production]
 ```
 
 ## Complete AgentSpace Setup Tutorial
@@ -1283,12 +1273,12 @@ sequenceDiagram
 ![Query Results Verification](Assets/Screenshot%202025-08-26%20at%2002.56.25.png)
 
 **Response Quality Checklist:**
-- ✅ Accurate SQL generation
-- ✅ Correct data aggregation
-- ✅ Professional formatting
-- ✅ Business context provided
-- ✅ Follow-up suggestions offered
-- ✅ Actionable insights included
+- Accurate SQL generation
+- Correct data aggregation
+- Professional formatting
+- Business context provided
+- Follow-up suggestions offered
+- Actionable insights included
 
 ## AgentSpace Production Deployment
 
@@ -1420,18 +1410,18 @@ This AgentSpace implementation provides a more sophisticated, conversational, an
 
 ---
 
-# 🔧 Unified Troubleshooting Guide
+# Unified Troubleshooting Guide
 
 ## Common Issues & Solutions Matrix
 
 | Issue Category | Symptoms | Quick Fix | Prevention |
 |---------------|----------|-----------|------------|
-| **🔐 Permissions** | "Access denied" errors | Check IAM roles: BigQuery Data Viewer, Vertex AI User | Use service accounts with minimal required permissions |
-| **📊 Data Loading** | Schema detection fails | Verify CSV headers, check for special characters | Test with sample data first |
-| **🐌 Performance** | Slow query responses (>5 sec) | • Simplify system prompts<br/>• Enable caching<br/>• Check table indexes | Monitor query patterns, optimize frequently used queries |
-| **🔗 Connectivity** | Agent can't access BigQuery | Verify dataset permissions and service account | Test connection before full deployment |
-| **❓ Query Accuracy** | Incorrect SQL generation | Refine system instructions with examples | Include sample queries in prompts |
-| **💬 Context Issues** | Agent misunderstands intent | Add business terminology to prompt | Provide clear database schema context |
+| **Permissions** | "Access denied" errors | Check IAM roles: BigQuery Data Viewer, Vertex AI User | Use service accounts with minimal required permissions |
+| **Data Loading** | Schema detection fails | Verify CSV headers, check for special characters | Test with sample data first |
+| **Performance** | Slow query responses (>5 sec) | • Simplify system prompts<br/>• Enable caching<br/>• Check table indexes | Monitor query patterns, optimize frequently used queries |
+| **Connectivity** | Agent can't access BigQuery | Verify dataset permissions and service account | Test connection before full deployment |
+| **Query Accuracy** | Incorrect SQL generation | Refine system instructions with examples | Include sample queries in prompts |
+| **Context Issues** | Agent misunderstands intent | Add business terminology to prompt | Provide clear database schema context |
 
 ## Step-by-Step Troubleshooting Process
 
@@ -1454,12 +1444,8 @@ flowchart TD
     FIX4 --> TEST
     
     TEST --> WORK{Working?}
-    WORK -->|Yes| DONE[✅ Resolved]
-    WORK -->|No| ESCALATE[📧 Contact Support]
-    
-    style START fill:#ffebee
-    style DONE fill:#e8f5e9
-    style ESCALATE fill:#fff3e0
+    WORK -->|Yes| DONE[Resolved]
+    WORK -->|No| ESCALATE[Contact Support]
 ```
 
 ## Quick Fixes Checklist
@@ -1508,15 +1494,15 @@ flowchart TD
 
 ---
 
-# 📖 Summary & Key Takeaways
+# Summary & Key Takeaways
 
 ## What You've Learned
 
-✅ **Database Design:** How to structure relational data for business intelligence  
-✅ **Cloud Integration:** Connecting CSV → GCS → BigQuery → AI  
-✅ **AI Implementation:** Building conversational database query systems  
-✅ **Business Applications:** Transforming data into actionable insights  
-✅ **Troubleshooting:** Solving common implementation challenges  
+**Database Design:** How to structure relational data for business intelligence  
+**Cloud Integration:** Connecting CSV → GCS → BigQuery → AI  
+**AI Implementation:** Building conversational database query systems  
+**Business Applications:** Transforming data into actionable insights  
+**Troubleshooting:** Solving common implementation challenges  
 
 ## Implementation Comparison
 
@@ -1529,9 +1515,6 @@ graph LR
     subgraph AI-Powered
         ASK[Ask Question] --> AUTO[Auto Generate & Execute] --> INSIGHT[Get Insights]
     end
-    
-    style ASK fill:#e8f5e9
-    style INSIGHT fill:#e8f5e9
 ```
 
 ## Quick Reference Commands
