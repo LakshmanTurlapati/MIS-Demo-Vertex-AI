@@ -553,45 +553,6 @@ Once your setup is complete, try these MIS-focused queries:
 ```
 
 
-## MIS Course Discussion Points
-
-### Data Management Concepts
-- How does this setup demonstrate database normalization principles?
-- What are the advantages of using cloud-based data storage?
-- How do foreign key relationships support data integrity?
-
-### Business Intelligence Applications
-- How can natural language querying improve manager productivity?
-- What types of business decisions can be supported by this data?
-- How does real-time query capability impact decision-making speed?
-
-### Information Systems Integration
-- What are the benefits of integrating AI with traditional databases?
-- How does this architecture support scalability and performance?
-- What security considerations are important in cloud-based systems?
-
-## Learning Path for MIS Students
-
-### Week 1: Foundation
-- [ ] Complete Quick Start Guide
-- [ ] Run 5 basic queries successfully
-- [ ] Understand database relationships
-
-### Week 2: Advanced Queries
-- [ ] Practice JOIN operations
-- [ ] Create aggregate reports
-- [ ] Test edge cases
-
-### Week 3: Business Applications
-- [ ] Build executive dashboard mockup
-- [ ] Analyze department efficiency
-- [ ] Generate predictive insights
-
-### Week 4: Professional Skills
-- [ ] Document your implementation
-- [ ] Present findings to class
-- [ ] Propose system improvements
-
 ---
 
 ## Advanced Enterprise Configuration
@@ -1551,6 +1512,37 @@ What is the average salary by department?
 - [ ] Generated one business intelligence report
 - [ ] Documented your implementation process
 - [ ] Presented findings and recommendations
+
+## Sample Questions You Can Ask
+
+Here are 15 example questions you can ask your MIS Database AI system to explore the organizational data and generate business insights:
+
+### Basic Data Queries
+1. "How many employees work in each department?"
+2. "Who are the department managers and which departments do they manage?"
+3. "Show me all projects with budgets over $1 million."
+
+### Financial Analysis
+4. "What is the average salary by department?"
+5. "Which department has the highest total project budget?"
+6. "Compare the total salary costs versus project budgets by department."
+7. "Show me employees earning more than the company average salary."
+
+### HR & Personnel Management
+8. "Which employees have been with the company the longest?"
+9. "How many employees were hired each year?"
+10. "Which department has the most experienced employees based on hire dates?"
+
+### Project Management
+11. "What projects are currently active and who is leading them?"
+12. "Which employee is managing the most projects?"
+13. "Show me project timelines and their assigned team leads."
+
+### Strategic Business Intelligence
+14. "Analyze organizational efficiency by comparing department sizes, salaries, and project allocation."
+15. "Which departments might need additional resources based on project workload and team size?"
+
+**Try these questions with your AgentSpace or Vertex AI Search implementation to see how the AI system converts natural language into SQL queries and provides business insights!**
 
 ---
 
