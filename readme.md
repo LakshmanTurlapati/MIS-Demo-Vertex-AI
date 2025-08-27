@@ -86,7 +86,7 @@ flowchart TB
 ## Which Implementation Should You Choose?
 
 | Method | Best For | Setup Time | Technical Level | Key Features |
-|--------|----------|------------|-----------------|--------------||
+|--------|----------|------------|-----------------|--------------|
 | **AgentSpace** (Recommended) | • Production systems<br/>• Conversational queries<br/>• Business users | 30 mins | Medium | • Natural conversation<br/>• Context retention<br/>• Advanced analytics |
 | **Vertex AI Search** | • Simple search needs<br/>• Quick prototypes<br/>• Basic queries | 20 mins | Low | • Search interface<br/>• Quick setup<br/>• Limited customization |
 | **Direct BigQuery** | • Technical users<br/>• Custom applications<br/>• SQL experts | 15 mins | High | • Full SQL control<br/>• No AI features<br/>• Maximum flexibility |
@@ -384,20 +384,20 @@ Access the full range of Google Cloud services from the navigation menu to locat
 ### 2.1 Create Storage Bucket
 Create a new Google Cloud Storage bucket named `mis_sample_data_bucket` to store your CSV files.
 
-![Storage Bucket Creation](Assets/Screenshot%202025-08-25%20at%2001.52.36.png)
+![Storage Bucket Creation](Assets/Screenshot%202025-08-25%20at%2002.05.19.png)
 
 **Configuration Steps:**
 - Choose appropriate region for your project
 - Set public access prevention
 - Configure lifecycle management if needed
-- Upload all three CSV files (departments.csv, employees.csv, projects.csv)
+- Prepare to upload all three CSV files (departments.csv, employees.csv, projects.csv)
 
 ## Step 3: BigQuery Dataset and Table Creation
 
 ### 3.1 Access BigQuery Console
 Navigate to BigQuery to create your dataset and load data from Cloud Storage.
 
-![BigQuery Console](Assets/Screenshot%202025-08-25%20at%2002.04.45.png)
+![BigQuery Console](Assets/Screenshot%202025-08-25%20at%2002.07.05.png)
 
 **Important Configuration:**
 - Create dataset named `mis_sample_dataset`
@@ -407,14 +407,13 @@ Navigate to BigQuery to create your dataset and load data from Cloud Storage.
 ### 3.2 Create Tables from CSV Files
 Load each CSV file into separate BigQuery tables within your dataset.
 
-![Table Creation Process](Assets/Screenshot%202025-08-25%20at%2002.05.19.png)
+![Table Creation Process](Assets/Screenshot%202025-08-25%20at%2002.04.45.png)
 
-**Table Creation Settings:**
-- Source: Google Cloud Storage
-- File format: CSV
-- Table naming: departments, employees, projects
-- Schema: Auto-detect from CSV headers
-- Write preference: Write if empty
+**BigQuery Configuration:**
+- Access BigQuery console from Google Cloud
+- Prepare to create dataset: mis_sample_dataset
+- Ensure proper project permissions
+- Plan table structure for three CSV files
 
 ### 3.3 Verify Table Structure
 Confirm all three tables are created successfully with proper schema detection.
